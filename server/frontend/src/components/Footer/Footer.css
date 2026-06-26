@@ -1,0 +1,55 @@
+.site-footer {
+  background: var(--clr-bg-card);
+  border-top: 1px solid var(--clr-border);
+  padding-top: 3rem;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.footer-brand .logo-icon { font-size: 1.5rem; }
+.footer-logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--clr-text);
+  display: inline-block;
+  margin-left: 0.4rem;
+}
+.footer-logo-text span { color: var(--clr-primary); }
+.footer-tagline { color: var(--clr-text-muted); font-size: 0.9rem; margin-top: 0.75rem; max-width: 280px; line-height: 1.5; }
+
+.footer-links h4 {
+  color: var(--clr-text);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+.footer-links { display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-links a {
+  color: var(--clr-text-muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.footer-links a:hover { color: var(--clr-primary); }
+
+.footer-bottom {
+  border-top: 1px solid var(--clr-border);
+  padding: 1.25rem 0;
+}
+.footer-bottom p { color: var(--clr-text-muted); font-size: 0.85rem; }
+
+@media (max-width: 768px) {
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .footer-inner { grid-template-columns: 1fr; }
+}

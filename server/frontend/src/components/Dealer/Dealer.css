@@ -1,0 +1,93 @@
+.dealer-page {}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+}
+.breadcrumb a { color: var(--clr-primary); }
+
+.dealer-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+.dealer-state-pill {
+  display: inline-block;
+  background: rgba(99,102,241,0.15);
+  color: var(--clr-primary);
+  border: 1px solid rgba(99,102,241,0.3);
+  padding: 0.2rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.dealer-page-title { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 800; margin-bottom: 0.75rem; }
+.dealer-meta { color: var(--clr-text-muted); font-size: 0.95rem; }
+
+/* Reviews */
+.reviews-section { margin-top: 1rem; }
+.reviews-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem; }
+.reviews-count { color: var(--clr-text-muted); font-size: 1rem; font-weight: 400; }
+
+.reviews-empty {
+  text-align: center;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--clr-text-muted);
+}
+.reviews-empty span { font-size: 3.5rem; }
+
+.reviews-list { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.review-card { }
+.review-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.reviewer-info { display: flex; align-items: center; gap: 0.75rem; }
+.reviewer-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--clr-primary), #7c3aed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+.reviewer-name { font-weight: 600; font-size: 0.95rem; }
+.review-date { font-size: 0.82rem; }
+
+.review-text {
+  color: var(--clr-text-muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.review-car-info {
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.review-car-info strong { color: var(--clr-text); }
