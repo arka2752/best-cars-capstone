@@ -1,0 +1,8 @@
+cURL Command:
+curl -X GET http://127.0.0.1:8000/djangoapp/get_dealerships/KS
+
+Output:
+{
+  "status": 200,
+  "dealers": []
+}

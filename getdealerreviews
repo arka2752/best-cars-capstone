@@ -1,0 +1,33 @@
+cURL Command:
+curl -X GET http://127.0.0.1:8000/djangoapp/get_dealer_reviews/1
+
+Output:
+{
+  "status": 200,
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "dealership": 1,
+      "review": "Fantastic experience! The staff was incredibly helpful and the process was smooth. I love my new car!",
+      "purchase": true,
+      "purchase_date": "2024-01-15",
+      "car_make": "Toyota",
+      "car_model": "Camry",
+      "car_year": 2024,
+      "sentiment": "positive"
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "dealership": 1,
+      "review": "Terrible service. Waited over 3 hours and no one attended to us. Very disappointed.",
+      "purchase": false,
+      "purchase_date": "",
+      "car_make": "",
+      "car_model": "",
+      "car_year": 0,
+      "sentiment": "negative"
+    }
+  ]
+}

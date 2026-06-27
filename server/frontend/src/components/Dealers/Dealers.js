@@ -10,7 +10,7 @@ const US_STATES = [
   'WA','WV','WI','WY',
 ];
 
-export default function Dealers() {
+export default function Dealers({ user }) {
   const [dealers, setDealers] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -100,15 +100,24 @@ export default function Dealers() {
         ) : (
           <div className="grid-3 dealers-grid">
             {filtered.map((dealer) => (
-              <Link key={dealer.id} to={`/dealer/${dealer.id}`} className="dealer-card card">
+              <div key={dealer.id} className="dealer-card card">
                 <div className="dealer-card-header">
                   <span className="dealer-state-badge">{dealer.st}</span>
                 </div>
                 <h3 className="dealer-name">{dealer.full_name}</h3>
                 <p className="dealer-city">📍 {dealer.city}, {dealer.state}</p>
                 <p className="dealer-address text-muted">{dealer.address}, {dealer.zip}</p>
-                <span className="dealer-cta">View Reviews →</span>
-              </Link>
+                <Link to={`/dealer/${dealer.id}`} className="dealer-cta">View Reviews →</Link>
+                {user && (
+                  <Link
+                    to={`/postreview/${dealer.id}`}
+                    className="dealer-cta"
+                    style={{ marginTop: '8px', display: 'block', color: '#a78bfa' }}
+                  >
+                    Review Dealer
+                  </Link>
+                )}
+              </div>
             ))}
           </div>
         )}

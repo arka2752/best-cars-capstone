@@ -17,7 +17,6 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Check if user is logged in (could check session via API)
     const storedUser = localStorage.getItem('userName');
     if (storedUser) {
       setUser(storedUser);
@@ -50,7 +49,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/dealers" element={<Dealers />} />
+          <Route path="/dealers" element={<Dealers user={user} />} />
           <Route path="/dealer/:id" element={<Dealer />} />
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/register" element={<Register onLogin={handleLogin} />} />
