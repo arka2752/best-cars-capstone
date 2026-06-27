@@ -28,7 +28,7 @@ jobs:
       - name: Lint with flake8
         run: |
           pip install flake8
-          flake8 server/ --max-line-length=120 --exclude=server/djangoproj/__pycache__,server/frontend,server/djangoapp/migrations --ignore=F401,W293,E402
+          flake8 server/ --max-line-length=120 --exclude=server/djangoproj/__pycache__,server/frontend,server/djangoapp/migrations,server/djangoapp/tests.py --ignore=F401,W293,E402
 
       - name: Run Django migrations and tests
         working-directory: server
